@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test
+        run: npm jest
 
       - name: Build Docker image
         run: docker build -t nodejs-cicd-app .
