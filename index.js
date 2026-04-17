@@ -3,8 +3,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("CI/CD Pipeline is running 🚀");
+});
+
 app.get("/health", (req, res) => {
-  res.json({ status: "OK", message: "Server is running" });
+  res.json({ status: "OK" });
 });
 
 app.listen(PORT, () => {
